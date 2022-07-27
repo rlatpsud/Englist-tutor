@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>LUCA_TEST</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    </head>
+
+    <body>
+        <div data-layer="24566118-16f3-4ebb-8d9c-1c439c3e95a0" class="x19201">
+        <div data-layer="e0ceec49-0917-4722-91e3-7e0417f5ee34" class="xTest">영어 발음 TEST</div>
+        
+        <div class="container" id="ttscont">
+            <div class="button-container">
+                <button id="buttonhear" class="h-button">
+                    <span class="fas fa-headphones"></span>원어민 발음듣기</button>
+            </div> 
+             
+    
+            <div id="ttsList"></div>
+            <div class="wrap" id="ttsloader">
+                <div id="loader"></div>
+                </div> 
+        </div>
+        
+        <div class=container id="formcontainer">
+            <form id="reftextform">
+                <textarea id = "reftext" rows = "3" cols = "80" name = "reftext" maxlength="160" autofocus placeholder="Enter Reference Text here..."></textarea>
+            </form>
+            <br>
+        </div>
+    
+        <div class="button-container">
+            <button id="randomtt" class="blue-button">
+                <span class="fa fa-random"></span>텍스트 생성</button>
+            <button id="buttonmic" class="green-button">
+                <span class="fa fa-microphone"></span>녹음</button>
+        </div>
+    
+        <div class="container" id="recordcont">
+            <div id="recordingsList"></div>
+    
+            <div class="container" id="recordloader">
+                <div id="loader"></div>
+            </div>
+            <div id="metrics" class="animate-bottom">
+                <div class=container>
+                    <div id="summarytable">
+                        <table>
+                            <tr>
+                                <th>정확도 점수</th>
+                                <th>유창성 점수</th>
+                                <th>완성도 점수</th>
+                                <th>발음 점수</th>
+                                <th id="woh">생략 단어</th>
+                                <th id="wih">추가 단어</th>
+                            </tr>
+                            <tr>
+                                <td id="accuracyscore"></td>
+                                <td id="fluencyscore"></td>
+                                <td id="completenessscore"></td>
+                                <td id="pronscore"></td>
+                                <td id="wordsomitted"></td>
+                                <td id="wordsinserted"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="container">
+                    <div id="detailedtable">
+                        <table>
+                            <tr id="wordrow"></tr>
+                            <tr id ="phonemerow"></tr>
+                            <tr id ="scorerow"></tr>
+                        </table>
+                    </div>
+                </div>
+    
+            </div>
+    
+        </div>
+        <footer id=footeralert>Please allow the use of your microphone.</footer>
+    <div data-layer="e90c85ee-661b-49ae-8c3d-1ea8eea21a5d" class="x">결과 보러가기</div>
+</div>
+    
+    
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+    <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+</body>
+</html>
+            
